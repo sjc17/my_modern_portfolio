@@ -90,9 +90,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-html {
-  font-size: 10px; }
-
 * {
   box-sizing: border-box; }
 
@@ -129,6 +126,7 @@ h3 {
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
+    display: inline-block;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
@@ -270,6 +268,7 @@ main {
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
       background: url("../img/portrait_small.jpg");
+      opacity: 100%;
       width: 150px;
       height: 150px; }
   .about-info {
@@ -279,7 +278,12 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; } }
